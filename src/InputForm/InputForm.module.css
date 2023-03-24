@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5em;
+    margin: 1em;
+    width: 100%;
+}
+
+button {
+    height: 100%;
+}
