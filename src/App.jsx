@@ -1,14 +1,32 @@
-import './App.css';
-import DetailsList from './DetailsList/DetailsList';
-import InputForm from './InputForm/InputForm';
+import { useState } from "react";
+import "./App.css";
+import InputForm from "./InputForm/InputForm";
+import UserContainer from "./DetailsContainer/DetailsContainer";
 
 function App() {
-  return (
-    <div className="App">
-      <InputForm />
-      <DetailsList />
-    </div>
-  );
+    const [user, setUser] = useState(null);
+    const [repos, setRepos] = useState(null);
+
+    const handleFormSubmit = async (value) => {
+        fetch("https://api.github.com/users/" + value)
+            .then((res) => res.json())
+            .then((data) => {
+                setUser(data);
+            });
+
+        fetch("https://api.github.com/users/" + value + "/repos")
+            .then((res) => res.json())
+            .then((data) => {
+                setRepos(data);
+            });
+    };
+
+    return (
+        <div className="App">
+            <InputForm onFormSubmit={handleFormSubmit} />
+            <UserContainer user={user} repos={repos} />
+        </div>
+    );
 }
 
 export default App;

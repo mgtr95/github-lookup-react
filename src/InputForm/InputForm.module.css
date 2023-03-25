@@ -8,5 +8,26 @@
 }
 
 button {
-    height: 100%;
-}
+    background-color: #1d3b80; 
+    border: none;
+    color: white; 
+    padding: 12px 24px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #29305c;/* Darker green on hover */
+    transform: translateY(-3px); 
+  }
+  
+  button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); 
+  }
+  
