@@ -21,10 +21,15 @@ function App() {
             });
     };
 
+    const handleReset = () => {
+        setUser(null);
+        setRepos(null);
+    };
+
     return (
         <div className="App">
             <InputForm onFormSubmit={handleFormSubmit} />
-            <UserContainer user={user} repos={repos} />
+            <UserContainer onReset={handleReset} user={user} repos={repos} />
         </div>
     );
 }
