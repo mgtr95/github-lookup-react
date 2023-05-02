@@ -25,8 +25,7 @@ https://api.github.com/users/{username}/repos to retrieve a list of the user's p
 ## Technologies Used
 
 This app was built using the following technologies:
-
-React: a JavaScript library for building user interfaces
+- React: a JavaScript library for building user interfaces
 
 ## Contributing
 If you'd like to contribute to this project, feel free to submit a pull request. However, please note that this is a simple app meant as a learning exercise, so major feature additions or changes may not be accepted.
