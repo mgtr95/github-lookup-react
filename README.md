@@ -13,6 +13,7 @@ Run the app by running npm start.
 Open your browser and navigate to http://localhost:3000.
 
 ## Using the App
+Firstly, go to search app page - https://simple-github-lookup-app.netlify.app/
 
 To use the app, simply enter a GitHub username into the search bar and hit the "Search" button. The app will then retrieve the user's information and display it, along with a list of their public repositories.
 
